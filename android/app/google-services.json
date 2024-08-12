@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "317042522885",
+    "project_id": "awademo-e4856",
+    "storage_bucket": "awademo-e4856.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317042522885:android:342ae46f2414d66ac6156c",
+        "android_client_info": {
+          "package_name": "com.example.awademo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8zxNGIqPj5j7Xu6kJTdts2kbMYv2Vuqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
