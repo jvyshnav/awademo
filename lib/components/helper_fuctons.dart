@@ -38,5 +38,6 @@ class THelperFunctions {
     } else if (value == "Indigo") {
       return Colors.indigo;
     }
+    return null;
   }
 }

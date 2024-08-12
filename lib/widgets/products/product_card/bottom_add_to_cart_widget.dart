@@ -16,14 +16,14 @@ class TBottomAddToCart extends StatelessWidget {
       ),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
+          const Row(
             children: [
               TCircularIcon(
                 icon: CupertinoIcons.minus,
                 backGroundColor: Colors.grey,
-                width: 40,
-                height: 40,
-                size: 25,
+                width: 35,
+                height: 35,
+                size: 20,
                 color: Colors.white,
               ),
               SizedBox(
@@ -39,8 +39,8 @@ class TBottomAddToCart extends StatelessWidget {
               TCircularIcon(
                 icon: Icons.add,
                 backGroundColor: Colors.black,
-                width: 40,
-                height: 40,
+                width: 35,
+                height: 35,
                 color: Colors.white,
               ),
             ],

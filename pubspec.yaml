@@ -45,6 +45,7 @@ dependencies:
   get: ^4.6.6
   carousel_slider_plus:
   readmore: ^3.0.0
+  flutter_pannable_rating_bar: ^2.7.2+1
 
 
 

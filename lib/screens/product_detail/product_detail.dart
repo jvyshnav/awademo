@@ -1,9 +1,13 @@
+import 'package:awademo/main.dart';
 import 'package:awademo/screens/product_detail/rating_and_share.dart';
+import 'package:awademo/screens/product_reviews/product_reviews.dart';
 import 'package:awademo/widgets/chips/choice_chips.dart';
 import 'package:awademo/widgets/products/product_card/bottom_add_to_cart_widget.dart';
 import 'package:awademo/widgets/products/product_detail_slider.dart';
 import 'package:awademo/widgets/text/section_heading.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:readmore/readmore.dart';
 
@@ -191,12 +195,16 @@ class ProductDetail extends StatelessWidget {
                     SizedBox(
                       height: 16,
                     ),
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TSectionHeading(title: 'Review(199)'),
                         IconButton(
-                            onPressed: () {}, icon: Icon(Icons.arrow_right))
+                          onPressed: () => Get.to(()=>const ProductReviewScreen()),
+                          icon: Icon(
+                            Icons.arrow_right,
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(
@@ -215,55 +223,55 @@ class ProductDetail extends StatelessWidget {
   }
 }
 
-class ReviewWidget extends StatelessWidget {
-  final String username;
-  final int rating;
-  final String review;
-
-  const ReviewWidget({
-    required this.username,
-    required this.rating,
-    required this.review,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                username,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(width: 8),
-              Row(
-                children: List.generate(5, (index) {
-                  return Icon(
-                    index < rating ? Icons.star : Icons.star_border,
-                    color: Colors.amber,
-                    size: 16,
-                  );
-                }),
-              ),
-            ],
-          ),
-          const SizedBox(height: 4),
-          Text(
-            review,
-            style: const TextStyle(
-              fontSize: 14,
-              color: Colors.black87,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class ReviewWidget extends StatelessWidget {
+//   final String username;
+//   final int rating;
+//   final String review;
+//
+//   const ReviewWidget({
+//     required this.username,
+//     required this.rating,
+//     required this.review,
+//   });
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Padding(
+//       padding: const EdgeInsets.symmetric(vertical: 8.0),
+//       child: Column(
+//         crossAxisAlignment: CrossAxisAlignment.start,
+//         children: [
+//           Row(
+//             children: [
+//               Text(
+//                 username,
+//                 style: const TextStyle(
+//                   fontSize: 16,
+//                   fontWeight: FontWeight.bold,
+//                 ),
+//               ),
+//               const SizedBox(width: 8),
+//               Row(
+//                 children: List.generate(5, (index) {
+//                   return Icon(
+//                     index < rating ? Icons.star : Icons.star_border,
+//                     color: Colors.amber,
+//                     size: 16,
+//                   );
+//                 }),
+//               ),
+//             ],
+//           ),
+//           const SizedBox(height: 4),
+//           Text(
+//             review,
+//             style: const TextStyle(
+//               fontSize: 14,
+//               color: Colors.black87,
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
