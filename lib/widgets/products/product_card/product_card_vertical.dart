@@ -22,7 +22,7 @@ class TProductCardVertical extends StatelessWidget {
       },
       child: Container(
         width: 180,
-        padding: const EdgeInsets.all(1),
+        padding: const EdgeInsets.only(top: 10),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
@@ -38,49 +38,53 @@ class TProductCardVertical extends StatelessWidget {
         child: Column(
           children: [
             // Thumbnail
-            TRoundedContainer(
-              height: 180,
-              padding: const EdgeInsets.all(8),
-              backgroundColor: Colors.white,
-              child: Stack(
-                children: [
-                  const TRoundedImage(
-                    imageUrl: 'assets/slider/slider2.webp',
-                    applyImageRadius: true,
-                  ),
-                  // Sale tag
-                  Positioned(
-                    left: 5,
-                    top: 5,
-                    child: TRoundedContainer(
-                      radius: 8,
-                      backgroundColor: Colors.yellow.withOpacity(0.8),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 3,
-                      ),
-                      child: const Text(
-                        "25%",
-                        style: TextStyle(color: Colors.black),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: TRoundedContainer(
+                height: 180,
+                width: double.infinity,
+                padding: const EdgeInsets.all(0),
+                backgroundColor: Colors.white,
+                child: Stack(
+                  children: [
+                     const TRoundedImage(width: double.infinity,
+                      imageUrl: 'assets/slider/slider2.webp',
+                      applyImageRadius: true,
+                    ),
+                    // Sale tag
+                    Positioned(
+                      left: 5,
+                      top: 5,
+                      child: TRoundedContainer(
+                        radius: 8,
+                        backgroundColor: Colors.yellow.withOpacity(0.8),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 3,
+                        ),
+                        child: const Text(
+                          "25%",
+                          style: TextStyle(color: Colors.black),
+                        ),
                       ),
                     ),
-                  ),
-                  // Favourite icon
-                  const Positioned(
-                    top: 0,
-                    right: 0,
-                    child: TCircularIcon(
-                      icon: CupertinoIcons.heart_fill,
-                      color: Colors.red,
+                    // Favourite icon
+                    const Positioned(
+                      top: 0,
+                      right: 0,
+                      child: TCircularIcon(
+                        icon: CupertinoIcons.heart_fill,
+                        color: Colors.red,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 4),
             // Details
             const Padding(
-              padding: EdgeInsets.only(left: 8),
+              padding: EdgeInsets.only(left: 1),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -92,7 +96,7 @@ class TProductCardVertical extends StatelessWidget {
                       maxLines: 1,
                     ),
                   ),
-                  SizedBox(height: 4),
+
                 ],
               ),
             ),
@@ -103,7 +107,7 @@ class TProductCardVertical extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // Price
-                  const TProdutPriceText(
+                  const TProductPriceText(
                     price: '125',
                   ),
                   Container(
@@ -115,8 +119,8 @@ class TProductCardVertical extends StatelessWidget {
                       ),
                     ),
                     child: const SizedBox(
-                      height: 32,
-                      width: 40,
+                      height: 25,
+                      width: 30,
                       child: Center(
                         child: Icon(
                           Icons.add,

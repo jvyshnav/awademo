@@ -1,3 +1,4 @@
+import 'package:awademo/screens/address/address.dart';
 import 'package:awademo/utils/navcontrollr.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -84,7 +85,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       icon: Icons.home,
                       title: 'My Address',
                       subTitle: 'Set shopping delivery address',
-                      onTap: () {},
+                      onTap: () => Get.to(()=>const UserAddressScreen()),
                     ),
                     const SizedBox(
                       height: 10,

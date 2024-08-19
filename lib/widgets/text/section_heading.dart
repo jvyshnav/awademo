@@ -24,7 +24,7 @@ class TSectionHeading extends StatelessWidget {
         Text(
           title,
           style: GoogleFonts.poppins(
-              fontSize: 20, color: textColor, fontWeight: FontWeight.bold),
+              fontSize: 18, color: textColor, fontWeight: FontWeight.bold),
           // TextStyle(
           //   fontSize: 24,
           //   color: textColor,

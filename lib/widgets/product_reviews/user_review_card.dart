@@ -13,8 +13,8 @@ class UserReviewCard extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: const Row(
+            const Expanded(
+              child: Row(
                 children: [
                   CircleAvatar(
                     backgroundImage: AssetImage("assets/profile.jpg"),
@@ -38,7 +38,7 @@ class UserReviewCard extends StatelessWidget {
           ],
         ),
 
-        Row(
+        const Row(
           children: [
             TRatingBArIndicator(rating: 4),
             SizedBox(
@@ -50,12 +50,12 @@ class UserReviewCard extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
 
         //description
-        ReadMoreText(
+        const ReadMoreText(
           "A Flutter plugin that allows for expanding and collapsing text with the added capability to style and interact with specific patterns in the text like hashtags, URLs, and mentions using the new Annotation feature.",
           trimLines: 1,
           trimMode: TrimMode.Line,
@@ -64,14 +64,14 @@ class UserReviewCard extends StatelessWidget {
           moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
           lessStyle: TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
 
         //company review
         TRoundedContainer(
           backgroundColor: Colors.grey.shade300,
-          child: Padding(
+          child: const Padding(
             padding: EdgeInsets.all(12),
             child: Column(
               children: [
@@ -107,7 +107,7 @@ class UserReviewCard extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 8,)
+        const SizedBox(height: 8,)
       ],
     );
   }

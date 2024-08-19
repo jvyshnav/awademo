@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TProductTitleText extends StatelessWidget {
-  const TProductTitleText({
+  const   TProductTitleText({
     super.key,
     required this.title,
-    this.smallSize = false,
+    this.smallSize = true,
     this.maxLines = 1,
     this.textAlign = TextAlign.left,
   });
@@ -27,7 +27,7 @@ class TProductTitleText extends StatelessWidget {
             )
           : const TextStyle(
               fontSize: 26,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.bold,
               overflow: TextOverflow.ellipsis,
             ),
       maxLines: maxLines,

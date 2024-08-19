@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TProdutPriceText extends StatelessWidget {
-  const TProdutPriceText({
+class TProductPriceText extends StatelessWidget {
+  const TProductPriceText({
     super.key,
-    this.currencySign = "Rs",
+    this.currencySign = "Rs ",
     required this.price,
     this.maxLine = 1,
   });
@@ -17,7 +17,7 @@ class TProdutPriceText extends StatelessWidget {
       currencySign + price,
       maxLines: maxLine,
       overflow: TextOverflow.ellipsis,
-      style: GoogleFonts.poppins(fontSize: 18, fontWeight: FontWeight.w600),
+      style: GoogleFonts.aBeeZee(fontSize: 17, fontWeight: FontWeight.w600),
     );
   }
 }
