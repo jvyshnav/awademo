@@ -33,7 +33,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
                   icon: Icon(leadingIcon),
                 )
               : null,
-      title: title,
+      title: title,titleTextStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 20),
       actions: actions,
     );
   }

@@ -18,13 +18,21 @@ class TSuccessScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.center,
-
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 50,),
+                const SizedBox(
+                  height: 50,
+                ),
+
                 ///image
-                Image(image: AssetImage(image,),width: 60,),
-                SizedBox(
+                Image(
+                  image: AssetImage(
+                    image,
+                  ),
+                  width: 60,
+                ),
+                const SizedBox(
                   height: 16,
                 ),
 
@@ -33,27 +41,27 @@ class TSuccessScreen extends StatelessWidget {
                   title,
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   subTitle,
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 14,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
 
                 ///button
                 ElevatedButton(
                   onPressed: onPressed,
-                  child: Text("Continue"),
+                  child: const Text("Continue"),
                 ),
               ],
             ),

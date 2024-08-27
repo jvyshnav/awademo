@@ -1,4 +1,5 @@
 import 'package:awademo/screens/address/address.dart';
+import 'package:awademo/screens/order_screen/order.dart';
 import 'package:awademo/utils/navcontrollr.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -92,9 +93,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                     TSettingsMenuTile(
                       icon: Icons.home,
-                      title: 'My Address',
-                      subTitle: 'Set shopping delivery address',
-                      onTap: () {},
+                      title: 'My Orders',
+                      subTitle: 'Your All orders',
+                      onTap: () => Get.to(()=>OrderScreen()),
                     ),
                     // Add more menu tiles as needed
                   ],
